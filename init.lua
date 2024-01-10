@@ -12,7 +12,7 @@ local function shn()
 					if dist <= radius then
 						local node = minetest.get_node_or_nil(pos)
 						local ndef = node and minetest.get_node_def(node.name)
-						if node.name ~= "air" and ndef and ndef.drawtype == "airlike" then
+						if ndef and node.name ~= "air" and ndef.drawtype == "airlike" then
 							minetest.add_particle({
 								pos = pos,
 								velocity = {x=0, y=0, z=0},
